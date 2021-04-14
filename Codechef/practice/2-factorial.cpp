@@ -5,12 +5,13 @@ int main()
 	int t;cin>>t;
 	while(t--)
 	{
-		long long int zeros = 0;
+		long long int f = 5;
 		long long int n;cin>>n;
-		while(n>5)
+		long long int zeros=0;
+		while(n/f>0)
 		{
-			zeros +=n/5;
-			n=zeros;
+			zeros += (n/f);
+			f=f*5;
 		}
 		cout<<zeros<<endl;
 	}
