@@ -11,13 +11,13 @@ int main()
 		{
 			cin>>songs[i];
 		}
-		int unclej;cin>>unclej;
-		unclej = songs[unclej-1];
-		cout<<"unclej is "<<unclej<<endl;
+		int Lostboy;cin>>Lostboy;
+		Lostboy = songs[Lostboy-1];
+		cout<<"Lostboy is "<<Lostboy<<endl;
 		sort(songs,songs+n);
 		for(int i=0;i<n;i++)
 		{
-			if(songs[i]==unclej)
+			if(songs[i]==Lostboy)
 			{
 				cout<<i+1<<endl;
 			}
@@ -25,9 +25,3 @@ int main()
 	}
 	return 0;
 }
-
-//0 1 2 3
-//1 3 4 2
-//3
-//1 2 3 4
-//
