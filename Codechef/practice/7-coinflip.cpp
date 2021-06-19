@@ -2,36 +2,30 @@
 using namespace std;
 int main()
 {
-	int t;cin>>t;
-	while(t--)
+	int testcases;
+	cin>>testcases;
+	for(int q=0;q<testcases;q++)
 	{
-		int games;cin>>games;
-		while(games--)
+		int inputs;
+		cin>>inputs;
+		for(int w=0;w<inputs;w++)
 		{
-			int i;cin>>i;	//initial value 1=head,2=tail
-			int n;cin>>n;	//no. of coins
-			int q;cin>>q;	//count 1=head,2=tail
-
-			int heads,tails;
-			if(i==2)
+			int initial,tocount,n;
+			cin>>initial>>n>>tocount;
+			if(initial==tocount)
 			{
-				tails=ceil(n/2);
-				heads=n-tails;
+				if(n%2==0)
+				{
+					cout<<n/2<<endl;
+				}
+				else
+				{
+					cout<<(n-1)/2<<endl;
+				}
 			}
 			else
 			{
-				heads=ceil(n/2);
-				tails=n-tails;	
-			}
-			/*cout<<"heads are "<<heads<<endl;
-			cout<<"tails are "<<tails<<endl;	*/
-			if(q==1)
-			{
-				cout<<heads<<endl;		
-			}
-			else
-			{
-				cout<<tails<<endl;	
+				cout<<(n+1)/2<<endl;
 			}
 		}
 	}
